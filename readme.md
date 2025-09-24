@@ -1,4 +1,4 @@
-# @jhuix/micromark-extension-gfm
+# [**@jhuix/micromark-extension-gfm**](https://github.com/jhuix-js/micromark-extension-gfm)
 
 [![Build][build-badge]][build]
 [![Coverage][coverage-badge]][coverage]
