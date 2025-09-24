@@ -1,4 +1,4 @@
-# micromark-extension-gfm
+# @jhuix/micromark-extension-gfm
 
 [![Build][build-badge]][build]
 [![Coverage][coverage-badge]][coverage]
@@ -9,6 +9,7 @@
 [![Chat][chat-badge]][chat]
 
 [micromark][] extensions to support [GitHub flavored markdown][gfm] (GFM).
+This extension is based on the [micromark-extension-gfm][] extension and has been updated to support headless tables.
 
 ## Contents
 
@@ -52,8 +53,8 @@ Alternatively, you can also use the underlying features separately:
   — support GFM [footnotes][]
 * [`micromark-extension-gfm-strikethrough`][gfm-strikethrough]
   — support GFM [strikethrough][]
-* [`micromark-extension-gfm-table`][gfm-table]
-  — support GFM [tables][]
+* [`@jhuix/micromark-extension-gfm-table`][gfm-table]
+  — support GFM [tables][] and headless table
 * [`micromark-extension-gfm-tagfilter`][gfm-tagfilter]
   — support GFM [tagfilter][]
 * [`micromark-extension-gfm-task-list-item`][gfm-task-list-item]
@@ -62,7 +63,7 @@ Alternatively, you can also use the underlying features separately:
 When you need a syntax tree, combine this package with
 [`mdast-util-gfm`][mdast-util-gfm].
 
-All these packages are used in [`remark-gfm`][remark-gfm], which focuses on
+All these packages are used in [`@jhuix/remark-gfm`][jhuix-remark-gfm], which focuses on
 making it easier to transform content by abstracting these internals away.
 
 ## Install
@@ -71,20 +72,20 @@ This package is [ESM only][esm].
 In Node.js (version 16+), install with [npm][]:
 
 ```sh
-npm install micromark-extension-gfm
+npm install @jhuix/micromark-extension-gfm
 ```
 
 In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import {gfm, gfmHtml} from 'https://esm.sh/micromark-extension-gfm@3'
+import {gfm, gfmHtml} from 'https://esm.sh/@jhuix/micromark-extension-gfm@4'
 ```
 
 In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import {gfm, gfmHtml} from 'https://esm.sh/micromark-extension-gfm@3?bundle'
+  import {gfm, gfmHtml} from 'https://esm.sh/@jhuix/micromark-extension-gfm@4?bundle'
 </script>
 ```
 
@@ -129,7 +130,7 @@ A note[^1]
 ```js
 import fs from 'node:fs/promises'
 import {micromark} from 'micromark'
-import {gfm, gfmHtml} from 'micromark-extension-gfm'
+import {gfm, gfmHtml} from '@jhuix/micromark-extension-gfm'
 
 const output = micromark(await fs.readFile('example.md'), {
   allowDangerousHtml: true,
@@ -195,7 +196,7 @@ Create an extension for `micromark` to enable GFM syntax.
 
 * `options` ([`Options`][api-options], optional)
   — configuration; passed to
-  [`micromark-extens-gfm-strikethrough`][gfm-strikethrough-options]
+  [`micromark-extens-gfm-strikethrough`][gfm-strikethrough-options] and [`@jhuix/micromark-extens-gfm-table`][gfm-table]
 
 ###### Returns
 
@@ -224,10 +225,13 @@ Configuration for syntax (TypeScript type).
 ###### Type
 
 ```ts
-export type {Options} from 'micromark-extension-gfm-strikethrough'
+export type {Options as gfmStrikethroughOptions} from 'micromark-extension-gfm-strikethrough'
+export type {Options as gfmTableOptions} from '@jhuix/micromark-extension-gfm-table'
 ```
 
-[See `Options`][gfm-strikethrough-options].
+[See `gfmStrikethroughOptions`][gfm-strikethrough-options].
+
+[See `gfmTableOptions`][gfm-table].
 
 ### `HtmlOptions`
 
@@ -249,7 +253,7 @@ supported, see each corresponding readme:
 * [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#bugs)
 * [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#bugs)
 * strikethrough: n/a
-* [table](https://github.com/micromark/micromark-extension-gfm-table#bugs)
+* [table](https://github.com/jhuix-js/micromark-extension-gfm-table#bugs)
 * tagfilter: n/a
 * tasklists: n/a
 
@@ -260,7 +264,7 @@ For recommendations on how to author GFM, see each corresponding readme:
 * [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#authoring)
 * [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#authoring)
 * [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#authoring)
-* [table](https://github.com/micromark/micromark-extension-gfm-table#authoring)
+* [table](https://github.com/jhuix-js/micromark-extension-gfm-table#authoring)
 * tagfilter: n/a
 * [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#authoring)
 
@@ -271,7 +275,7 @@ For info on what HTML features GFM relates to, see each corresponding readme:
 * [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#html)
 * [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#html)
 * [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#html)
-* [table](https://github.com/micromark/micromark-extension-gfm-table#html)
+* [table](https://github.com/jhuix-js/micromark-extension-gfm-table#html)
 * [tagfilter](https://github.com/micromark/micromark-extension-gfm-tagfilter#html)
 * [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#html)
 
@@ -282,7 +286,7 @@ For info on how GitHub styles these features, see each corresponding readme:
 * [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#css)
 * [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#css)
 * [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#css)
-* [table](https://github.com/micromark/micromark-extension-gfm-table#css)
+* [table](https://github.com/jhuix-js/micromark-extension-gfm-table#css)
 * tagfilter: n/a
 * [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#css)
 
@@ -293,7 +297,7 @@ For info on the syntax of these features, see each corresponding readme:
 * [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#syntax)
 * [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#syntax)
 * [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#syntax)
-* [table](https://github.com/micromark/micromark-extension-gfm-table#syntax)
+* [table](https://github.com/jhuix-js/micromark-extension-gfm-table#syntax)
 * tagfilter: n/a
 * [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#syntax)
 
@@ -311,7 +315,7 @@ versions of Node.js.
 When we cut a new major release, we drop support for unmaintained versions of
 Node.
 This means we try to keep the current release line,
-`micromark-extension-gfm@^3`, compatible with Node.js 16.
+`@jhuix/micromark-extension-gfm@^4`, compatible with Node.js 16.
 
 This package works with `micromark` version `3` and later.
 
@@ -334,7 +338,7 @@ abide by its terms.
 
 ## License
 
-[MIT][license] © [Titus Wormer][author]
+[MIT][license], [Jhuix][author] (Hui Jin)
 
 <!-- Definitions -->
 
@@ -402,6 +406,8 @@ abide by its terms.
 
 [micromark-extension]: https://github.com/micromark/micromark#syntaxextension
 
+[micromark-extension-gfm]: https://github.com/micromark/micromark-extension-gfm
+
 [micromark-html-extension]: https://github.com/micromark/micromark#htmlextension
 
 [gfm-strikethrough]: https://github.com/micromark/micromark-extension-gfm-strikethrough
@@ -414,13 +420,13 @@ abide by its terms.
 
 [gfm-footnote-html-options]: https://github.com/micromark/micromark-extension-gfm-footnote#htmloptions
 
-[gfm-table]: https://github.com/micromark/micromark-extension-gfm-table
+[gfm-table]: https://github.com/jhuix-js/micromark-extension-gfm-table
 
 [gfm-tagfilter]: https://github.com/micromark/micromark-extension-gfm-tagfilter
 
 [gfm-task-list-item]: https://github.com/micromark/micromark-extension-gfm-task-list-item
 
-[remark-gfm]: https://github.com/remarkjs/remark-gfm
+[jhuix-remark-gfm]: https://github.com/jhuix-js/remark-gfm
 
 [mdast-util-gfm]: https://github.com/syntax-tree/mdast-util-gfm
 

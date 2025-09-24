@@ -1,6 +1,6 @@
 {
-  "name": "micromark-extension-gfm",
-  "version": "3.0.0",
+  "name": "@jhuix/micromark-extension-gfm",
+  "version": "4.0.0",
   "description": "micromark extension to support GFM (GitHub Flavored Markdown)",
   "license": "MIT",
   "keywords": [
@@ -17,15 +17,15 @@
     "markdown",
     "unified"
   ],
-  "repository": "micromark/micromark-extension-gfm",
-  "bugs": "https://github.com/micromark/micromark-extension-gfm/issues",
+  "repository": "jhuix-js/micromark-extension-gfm",
+  "bugs": "https://github.com/jhuix-js/micromark-extension-gfm/issues",
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/unified"
   },
-  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "author": "Jhuix [Hui Jin] <jhuix0117@gmail.com>",
   "contributors": [
-    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+    "Jhuix [Hui Jin] <jhuix0117@gmail.com>"
   ],
   "sideEffects": false,
   "type": "module",
@@ -39,7 +39,7 @@
     "micromark-extension-gfm-autolink-literal": "^2.0.0",
     "micromark-extension-gfm-footnote": "^2.0.0",
     "micromark-extension-gfm-strikethrough": "^2.0.0",
-    "micromark-extension-gfm-table": "^2.0.0",
+    "@jhuix/micromark-extension-gfm-table": "^3.1.1",
     "micromark-extension-gfm-tagfilter": "^2.0.0",
     "micromark-extension-gfm-task-list-item": "^2.0.0",
     "micromark-util-combine-extensions": "^2.0.0",
@@ -81,6 +81,7 @@
     "trailingComma": "none",
     "useTabs": false
   },
+  "private": false,
   "remarkConfig": {
     "plugins": [
       "remark-preset-wooorm"
