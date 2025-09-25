@@ -338,7 +338,7 @@ abide by its terms.
 
 ## License
 
-[MIT][license], [Jhuix][author] (Hui Jin)
+[MIT][license], Updated by [Jhuix][author] (Hui Jin)
 
 <!-- Definitions -->
 
