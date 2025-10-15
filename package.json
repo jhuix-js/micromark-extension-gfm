@@ -1,6 +1,6 @@
 {
   "name": "@jhuix/micromark-extension-gfm",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "micromark extension to support GFM (GitHub Flavored Markdown)",
   "license": "MIT",
   "keywords": [
