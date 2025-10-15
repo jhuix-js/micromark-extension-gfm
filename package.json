@@ -19,10 +19,6 @@
   ],
   "repository": "jhuix-js/micromark-extension-gfm",
   "bugs": "https://github.com/jhuix-js/micromark-extension-gfm/issues",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/unified"
-  },
   "author": "Jhuix [Hui Jin] <jhuix0117@gmail.com>",
   "contributors": [
     "Jhuix [Hui Jin] <jhuix0117@gmail.com>"
@@ -36,10 +32,10 @@
     "index.js"
   ],
   "dependencies": {
+    "@jhuix/micromark-extension-gfm-table": "^3.1.3",
     "micromark-extension-gfm-autolink-literal": "^2.0.0",
     "micromark-extension-gfm-footnote": "^2.0.0",
     "micromark-extension-gfm-strikethrough": "^2.0.0",
-    "@jhuix/micromark-extension-gfm-table": "^3.1.1",
     "micromark-extension-gfm-tagfilter": "^2.0.0",
     "micromark-extension-gfm-task-list-item": "^2.0.0",
     "micromark-util-combine-extensions": "^2.0.0",

@@ -1,15 +1,12 @@
 # [**@jhuix/micromark-extension-gfm**](https://github.com/jhuix-js/micromark-extension-gfm)
 
-[![Build][build-badge]][build]
-[![Coverage][coverage-badge]][coverage]
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
-[![Sponsors][sponsors-badge]][collective]
-[![Backers][backers-badge]][collective]
-[![Chat][chat-badge]][chat]
 
 [micromark][] extensions to support [GitHub flavored markdown][gfm] (GFM).
-This extension is based on the [micromark-extension-gfm][] extension and has been updated to support headless tables.
+This extension is based on the [micromark-extension-gfm][] extension.
+It support the table syntax of headless, multiline head, rowspan marker,
+colspan (left or right) marker.
 
 ## Contents
 
@@ -61,10 +58,11 @@ Alternatively, you can also use the underlying features separately:
   — support GFM [tasklists][]
 
 When you need a syntax tree, combine this package with
-[`mdast-util-gfm`][mdast-util-gfm].
+[`@jhuix/mdast-util-gfm`][mdast-util-gfm].
 
-All these packages are used in [`@jhuix/remark-gfm`][jhuix-remark-gfm], which focuses on
-making it easier to transform content by abstracting these internals away.
+All these packages are used in [`@jhuix/remark-gfm`][jhuix-remark-gfm], which
+focuses on making it easier to transform content by abstracting these internals
+away.
 
 ## Install
 
@@ -196,7 +194,8 @@ Create an extension for `micromark` to enable GFM syntax.
 
 * `options` ([`Options`][api-options], optional)
   — configuration; passed to
-  [`micromark-extens-gfm-strikethrough`][gfm-strikethrough-options] and [`@jhuix/micromark-extens-gfm-table`][gfm-table]
+  [`micromark-extens-gfm-strikethrough`][gfm-strikethrough-options] and
+  [`@jhuix/micromark-extens-gfm-table`][gfm-table]
 
 ###### Returns
 
@@ -342,14 +341,6 @@ abide by its terms.
 
 <!-- Definitions -->
 
-[build-badge]: https://github.com/micromark/micromark-extension-gfm/workflows/main/badge.svg
-
-[build]: https://github.com/micromark/micromark-extension-gfm/actions
-
-[coverage-badge]: https://img.shields.io/codecov/c/github/micromark/micromark-extension-gfm.svg
-
-[coverage]: https://codecov.io/github/micromark/micromark-extension-gfm
-
 [downloads-badge]: https://img.shields.io/npm/dm/micromark-extension-gfm.svg
 
 [downloads]: https://www.npmjs.com/package/micromark-extension-gfm
@@ -357,16 +348,6 @@ abide by its terms.
 [size-badge]: https://img.shields.io/badge/dynamic/json?label=minzipped%20size&query=$.size.compressedSize&url=https://deno.bundlejs.com/?q=micromark-extension-gfm
 
 [size]: https://bundlejs.com/?q=micromark-extension-gfm
-
-[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
-
-[backers-badge]: https://opencollective.com/unified/backers/badge.svg
-
-[collective]: https://opencollective.com/unified
-
-[chat-badge]: https://img.shields.io/badge/chat-discussions-success.svg
-
-[chat]: https://github.com/micromark/micromark/discussions
 
 [npm]: https://docs.npmjs.com/cli/install
 
@@ -428,7 +409,7 @@ abide by its terms.
 
 [jhuix-remark-gfm]: https://github.com/jhuix-js/remark-gfm
 
-[mdast-util-gfm]: https://github.com/syntax-tree/mdast-util-gfm
+[mdast-util-gfm]: https://github.com/jhuix-js/mdast-util-gfm
 
 [api-gfm]: #gfmoptions
 

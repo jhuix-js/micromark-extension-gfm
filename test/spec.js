@@ -32,7 +32,8 @@ export const spec = [
   {
     category: 'Tables',
     input: '| abc | def |\n| --- |\n| bar |\n',
-    output: '<p>| abc | def |\n| --- |\n| bar |</p>\n'
+    output:
+      '<p>| abc | def |</p>\n<table>\n<thead>\n</thead>\n<tbody>\n<tr>\n<td>bar</td>\n</tr>\n</tbody>\n</table>\n'
   },
   {
     category: 'Tables',
