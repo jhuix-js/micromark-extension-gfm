@@ -229,7 +229,7 @@ export type {Options as gfmTableOptions} from '@jhuix/micromark-extension-gfm-ta
 
 [See `gfmStrikethroughOptions`][gfm-strikethrough-options].
 
-[See `gfmTableOptions`][gfm-table].
+[See `gfmTableOptions`][gfm-table-options].
 
 ### `HtmlOptions`
 
@@ -385,6 +385,8 @@ content, they allow defining arbitrary HTML.
 [gfm-footnote-html-options]: https://github.com/micromark/micromark-extension-gfm-footnote#htmloptions
 
 [gfm-table]: https://github.com/jhuix-js/micromark-extension-gfm-table
+
+[gfm-table-options]: https://github.com/jhuix-js/micromark-extension-gfm-table#gfmtableoptions-options
 
 [gfm-tagfilter]: https://github.com/micromark/micromark-extension-gfm-tagfilter
 
