@@ -27,7 +27,6 @@ colspan (left or right) marker.
 * [Types](#types)
 * [Compatibility](#compatibility)
 * [Security](#security)
-* [Contribute](#contribute)
 * [License](#license)
 
 ## What is this?
@@ -325,29 +324,19 @@ Setting `clobberPrefix = ''` is dangerous, it opens you up to DOM clobbering.
 The `labelTagName` and `labelAttributes` options are unsafe when used with user
 content, they allow defining arbitrary HTML.
 
-## Contribute
-
-See [`contributing.md` in `micromark/.github`][contributing] for ways to get
-started.
-See [`support.md`][support] for ways to get help.
-
-This project has a [code of conduct][coc].
-By interacting with this repository, organization, or community you agree to
-abide by its terms.
-
 ## License
 
 [MIT][license], Updated by [Jhuix][author] (Hui Jin)
 
 <!-- Definitions -->
 
-[downloads-badge]: https://img.shields.io/npm/dm/micromark-extension-gfm.svg
+[downloads-badge]: https://img.shields.io/npm/dm/@jhuix/micromark-extension-gfm.svg
 
-[downloads]: https://www.npmjs.com/package/micromark-extension-gfm
+[downloads]: https://www.npmjs.com/package/@jhuix/micromark-extension-gfm
 
-[size-badge]: https://img.shields.io/badge/dynamic/json?label=minzipped%20size&query=$.size.compressedSize&url=https://deno.bundlejs.com/?q=micromark-extension-gfm
+[size-badge]: https://img.shields.io/badge/dynamic/json?label=minzipped%20size&query=$.size.compressedSize&url=https://deno.bundlejs.com/?q=@jhuix/micromark-extension-gfm
 
-[size]: https://bundlejs.com/?q=micromark-extension-gfm
+[size]: https://bundlejs.com/?q=@jhuix/micromark-extension-gfm
 
 [npm]: https://docs.npmjs.com/cli/install
 
@@ -356,12 +345,6 @@ abide by its terms.
 [license]: license
 
 [author]: https://wooorm.com
-
-[contributing]: https://github.com/micromark/.github/blob/main/contributing.md
-
-[support]: https://github.com/micromark/.github/blob/main/support.md
-
-[coc]: https://github.com/micromark/.github/blob/main/code-of-conduct.md
 
 [esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 
